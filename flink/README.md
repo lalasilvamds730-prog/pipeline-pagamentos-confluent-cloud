@@ -1,11 +1,23 @@
+
 # Processamento com Flink SQL
 
-Esta pasta armazenará as consultas SQL utilizadas para processar os eventos de pagamentos em tempo real.
+Esta pasta documenta o processamento dos pagamentos em tempo real.
 
-O processamento previsto inclui:
+## Objetivos
 
-- Enriquecimento das transações com informações de contas.
-- Identificação de possíveis pagamentos suspeitos.
-- Regra de alerta para três transações no mesmo cartão em um intervalo de 60 segundos.
+- Enriquecer transações com informações das contas.
+- Analisar transações por cartão.
+- Identificar possíveis comportamentos suspeitos.
+- Encaminhar alertas para um tópico específico.
 
-As consultas serão adicionadas e testadas durante a implementação do pipeline.
+## Regra de detecção
+
+A regra planejada é detectar três ou mais transações do mesmo cartão dentro de uma janela de 60 segundos.
+
+## Enriquecimento
+
+As transações serão combinadas com os dados de contas por meio de consultas temporais, conforme a configuração dos tópicos e seus esquemas.
+
+## Status
+
+Documentação inicial. As consultas Flink SQL ainda precisam ser implementadas e testadas no ambiente Confluent Cloud.
