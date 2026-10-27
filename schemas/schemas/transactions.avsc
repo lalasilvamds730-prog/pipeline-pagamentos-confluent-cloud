@@ -1,0 +1,42 @@
+
+{
+  "type": "record",
+  "name": "Transaction",
+  "namespace": "br.com.pipeline.pagamentos",
+  "doc": "Contrato de dados para eventos de pagamentos",
+  "fields": [
+    {
+      "name": "transaction_id",
+      "type": "long",
+      "doc": "Identificador único da transação"
+    },
+    {
+      "name": "card_id",
+      "type": "long",
+      "doc": "Identificador do cartão"
+    },
+    {
+      "name": "merchant_id",
+      "type": "long",
+      "doc": "Identificador do estabelecimento"
+    },
+    {
+      "name": "amount",
+      "type": "double",
+      "doc": "Valor da transação"
+    },
+    {
+      "name": "transaction_time",
+      "type": {
+        "type": "long",
+        "logicalType": "timestamp-millis"
+      },
+      "doc": "Data e hora da transação em milissegundos desde a época Unix"
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "doc": "Status da transação"
+    }
+  ]
+}
