@@ -1,0 +1,33 @@
+
+{
+  "type": "record",
+  "name": "Transaction",
+  "namespace": "br.com.pagamentos",
+  "doc": "Contrato de dados para eventos de pagamento",
+  "fields": [
+    {
+      "name": "transaction_id",
+      "type": "long"
+    },
+    {
+      "name": "card_id",
+      "type": "long"
+    },
+    {
+      "name": "merchant_id",
+      "type": "long"
+    },
+    {
+      "name": "amount",
+      "type": "double"
+    },
+    {
+      "name": "transaction_time",
+      "type": "string"
+    },
+    {
+      "name": "status",
+      "type": "string"
+    }
+  ]
+}
